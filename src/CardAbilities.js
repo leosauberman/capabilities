@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
+import { Line } from 'rc-progress';
 
 const styles = {
   card: {
@@ -12,32 +12,26 @@ const styles = {
     marginLeft: 25,
     marginTop: 10,
     lineHeight: 1.6,
-  },
-  li: {
-      marginTop: 1,
-  },
+  }
 };
 
-function SimpleCard(props) {
+function CardAbilities(props) {
   const { classes } = props;
 
   return (
     <div>
       <Card className={classes.card}>
         <CardContent>
-        <h2>Formação Acadêmica</h2>
-          <ul>
-              <li className={classes.li}>Ensino Médio-Técnico em Programação - <a href="http://www.ort.org.br/">Instituto de Tecnologia ORT </a>- 2017</li>
-              <li>Graduando em Bacharelado em Ciência da Computação - <a href="http://www.cefet-rj.br">CEFET-RJ </a>- previsão de Formatura 2022</li>
-          </ul>
+            <h2 style={{margin: "0 37%"}}>Habilidades</h2>
+            <Line percent="75" strokeWidth="2" strokeColor="#3a7d62" trailColor="#d5839e" trailWidth="2"/>
         </CardContent>
       </Card>
     </div>
   );
 }
 
-SimpleCard.propTypes = {
+CardAbilities.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleCard);
+export default withStyles(styles)(CardAbilities);

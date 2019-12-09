@@ -6,13 +6,14 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
+import leo from "./assets/leo.jpeg";
 
 const styles = {
   card: {
-    maxWidth: '16%',
-    marginLeft: 25,
+    marginLeft: "15%",
     marginTop: 10,
     lineHeight: 1.6,
+    width: "20em"
   },
   avatar: {
     width: 70,
@@ -31,9 +32,12 @@ function SimpleCard(props) {
     <div>
       <Card className={classes.card}>
         <CardContent>
-          <Avatar style={{ margin: "0 0 10px 33%" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxbYoicoNWNyF9T7MrhUQqp_CaBjGFBjys2ke-ApgnnSe3C-KqGA" alt="Leonardo Sauberman" className={classes.avatar}/>
-          <Avatar style={{ margin: "5px 0", marginLeft: "25%", marginRight: "10px", display: "inline-block"}} src="https://www.shareicon.net/data/2017/03/07/880593_media_512x512.png" alt="Github" className={classes.smallAvatar}/>
-          <Avatar style={{ margin: "5px 10px", display: "inline-block"}} src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-128.png" alt="Linkedin" className={classes.smallAvatar}/>
+          <Avatar style={{ margin: "0 0 10px 33%" }} src={leo} alt="Leonardo Sauberman" className={classes.avatar}/>
+          <h3 style={{textAlign: "center"}}>Leonardo Sauberman</h3>
+          <div style={{ display: "flex", alignItems: "center"}}>
+            <a href="https://github.com/leosauberman" style={{ margin: "5px 0", marginLeft: "25%", marginRight: "10px", display: "inline-block"}}> <Avatar src="https://www.shareicon.net/data/2017/03/07/880593_media_512x512.png" alt="Github" className={classes.smallAvatar}/></a>
+            <a href="https://br.linkedin.com/in/leonardo-sauberman-dias-de-moraes-7ab536158" style={{ margin: "5px 10px", display: "inline-block"}}> <Avatar src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-128.png" alt="Linkedin" className={classes.smallAvatar}/></a>
+          </div>
         </CardContent>
       </Card>
     </div>

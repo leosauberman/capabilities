@@ -4,14 +4,18 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import { Line } from 'rc-progress';
+import ProgressBar from 'react-bootstrap/ProgressBar'
+
 
 const styles = {
   card: {
-    maxWidth: '31%',
-    marginLeft: 25,
+    width: "30em",
+    marginLeft: "15%",
     marginTop: 10,
     lineHeight: 1.6,
+  },
+  progress: {
+    marginBottom: "2%",
   }
 };
 
@@ -22,8 +26,19 @@ function CardAbilities(props) {
     <div>
       <Card className={classes.card}>
         <CardContent>
-            <h2 style={{margin: "0 37%"}}>Habilidades</h2>
-            <Line percent="75" strokeWidth="2" strokeColor="#3a7d62" trailColor="#d5839e" trailWidth="2"/>
+            <h2 style={{textAlign: "center"}}>Habilidades</h2>
+            <h5>Node.JS</h5>
+            <ProgressBar className={classes.progress} animated variant="success" now={75}/>
+            <h5>Desenvolvimento Web</h5>
+            <ProgressBar className={classes.progress} animated variant="success" now={85}/>
+            <h5>Android Studio</h5>
+            <ProgressBar className={classes.progress} animated variant="success" now={60}/>
+            <h5>DialogFlow e IBM Watson</h5>
+            <ProgressBar className={classes.progress} animated variant="success" now={50}/>
+            <h5>Python</h5>
+            <ProgressBar className={classes.progress} animated variant="success" now={75}/>
+
+
         </CardContent>
       </Card>
     </div>

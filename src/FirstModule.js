@@ -14,7 +14,7 @@ class FirstModule extends Component{
     
     render(){
         return(
-            <div>
+            <div style={{display: "flex", alignItems: "top"}}>
                 <Card/>
                 <CardProfile/>
                 <CardAbilities/>

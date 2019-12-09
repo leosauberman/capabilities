@@ -21,10 +21,13 @@ const styles = theme => ({
 const sendMail = () =>{
   window.open("mailto:leosauberman@gmail.com?subject=Primeiro contato");
 }
+const sendSMS = () =>{
+  window.open("https://api.whatsapp.com/send?phone=5521995520676&text=Fala%20Leo!%20Eu%20sou");
+}
 
 const actions = [
   { icon: <MailIcon onClick={sendMail}/>, name: 'E-mail'},
-  { icon: <ChatIcon />, name: 'Chat' },
+  { icon: <ChatIcon onClick={sendSMS}/>, name: 'Whatsapp' },
 ];
 
 class SpeedDials extends React.Component {

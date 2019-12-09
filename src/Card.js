@@ -8,10 +8,11 @@ import Button from '@material-ui/core/Button';
 
 const styles = {
   card: {
-    maxWidth: '31%',
-    marginLeft: 25,
+    width: "30em",
+    marginLeft: "3%",
     marginTop: 10,
     lineHeight: 1.6,
+    height: 221,
   },
   li: {
       marginTop: 1,
